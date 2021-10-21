@@ -3,6 +3,7 @@
 namespace SilverStripe\Link\Models;
 
 use SilverStripe\Forms\EmailField;
+use SilverStripe\Forms\FieldList;
 
 /**
  * A link to an Email address.
@@ -22,7 +23,7 @@ class EmailLink extends Link
         return isset($data['Email']) ? $data['Email'] : '';
     }
 
-    public function getCMSFields()
+    public function getCMSFields(): FieldList
     {
         $fields = parent::getCMSFields();
 

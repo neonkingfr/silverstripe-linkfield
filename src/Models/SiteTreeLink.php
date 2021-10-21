@@ -4,6 +4,7 @@ namespace SilverStripe\Link\Models;
 
 use SilverStripe\CMS\Forms\AnchorSelectorField;
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TreeDropdownField;
 
 /**
@@ -37,7 +38,7 @@ class SiteTreeLink extends Link
         return $page ? $page->URLSegment : '';
     }
 
-    public function getCMSFields()
+    public function getCMSFields(): FieldList
     {
         $fields = parent::getCMSFields();
 
